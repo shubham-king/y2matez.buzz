@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+ <title>YouTube Pro Video Downloader</title>
+
+  <link href="https://y2matez.netlify.app/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <link href="https://y2matez.netlify.app/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://y2matez.netlify.app/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="https://y2matez.netlify.app/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link href="https://y2matez.netlify.app/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <link href="https://y2matez.netlify.app/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+
+  <link href="https://y2matez.netlify.app/assets/css/style.css" rel="stylesheet">
+
+    
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+.butn {
+
+                    
+
+               
+
+                display: inline-block;
+
+                outline: 0;
+
+                cursor: pointer;
+
+                border: none;
+
+                padding: 0 56px;
+
+                height: 45px;
+
+                line-height: 45px;
+
+                border-radius: 7px;
+
+                background-color: #0070f3;
+
+                color: white;
+
+                font-weight: 400;
+
+                font-size: 16px;
+
+                box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+
+                transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+
+                :hover{
+
+                    background: rgba(0,118,255,0.9);
+
+                    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+
+                }
+
+                
+
+   }             
+
+</style>
+
+</head>
+
+<body>
+
+     <section id="portfolio-details" class="portfolio-details">
+
+     
+
+   
+
+          <div class="col-lg-4">
+
+            <div class="portfolio-info">
+
+              <h3>YouTube Pro Downloader</h3>
+
+              
+
+              <div class="form-group">
+
+              <label class="text-weight"><b>Enter YouTube Video Link:</b></label>
+
+              <input type="txt" name="link" class="form-control link" required>
+
+            </div>
+
+     
+
+        <form class="form-download">
+
+          <div class="row">
+
+            <div class="col-md-12">
+
+              <div class="form-group">
+
+                <label class="text-weight"><b>Select Video Format:</b></label>
+
+                <select class="form-control fromate" required>
+
+                  <option selected disabled>Select Video Formate</option>
+
+                  <option value="mp3">Mp3</option>
+
+                  <option value="webm_audio">webm_audio</option>
+
+                  <option value="aac">aac</option>
+
+                  <option value="flac">flac</option>
+
+                  <option value="ogg">ogg</option>
+
+                  <option value="wav">wav</option>
+
+                  <option value="mp4a">144 Mp4</option>
+
+                  <option value="360">360 Mp4</option>
+
+                  <option value="480">480 Mp4</option>
+
+                  <option value="720">720 Mp4</option>
+
+                  <option value="1080">1080 Mp4</option>
+
+                  <option value="4k">4k Mp4</option>
+
+                  <option value="8k">8k Mp4</option>
+
+                </select>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-md-12">
+
+              <div class="form-group mt-4 download-video">
+
+                <button class="butn click-btn-down" value="submit">
+
+Download <i class="fa fa-download"></i>
+
+</button>
+
+                
+
+                  </div>
+
+                  <br>
+
+                  
+
+                  
+
+                  
+
+            </div>
+
+          </div>
+
+        </form>
+
+        
+
+       <i class="fa fa-user"></i> <a href="https://y2matez.buzz/">If this is not working click here !</a>
+
+        <br>
+
+        
+
+        <i class="fa fa-lock"></i> <a href="https://y2matez.buzz/">Get this script downloading here</a>
+
+        
+
+        
+
+    </div>
+
+    </div>
+
+      </section>     
+
+  
+
+<script type="text/javascript">
+
+  $(".click-btn-down").click(function(){
+
+      var link = $(".link").val();
+
+    var fromate = $(".fromate").children("option:selected").val();
+
+    var src =""+link+"="+fromate+"";
+
+    downloadVideo(link,fromate);
+
+  });
+
+  function downloadVideo(link,fromate) {
+
+      $('.download-video').html('<iframe style="width:100%;height:60px;border:0;overflow:hidden;" scrolling="no" src="https://loader.to/api/button/?url='+link+'&f='+fromate+'"></iframe>');
+
+  }
+
+</script>
+
+</body>
+
+</html>
+
